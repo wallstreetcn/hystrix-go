@@ -119,7 +119,8 @@ if err != nil {
 metricCollector.Registry.Register(c.NewStatsdCollector)
 ```
 
-### Integate with Turbine
+### Aggregator for multiple streams
+Use [Turbine](https://github.com/Netflix/Turbine) to aggregate multiple instances' metric to one. Turbine supports multiple kinds of service discovery [Consul, Etcd, Eureka] to discover hystrix streams.
 
 FAQ
 ---
