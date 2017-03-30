@@ -207,7 +207,7 @@ func TestFailedFallback(t *testing.T) {
 		Convey("the returned error should contain both", func() {
 			err := <-errChan
 
-			So(err.Error(), ShouldEqual, "fallback failed with 'fallback_error'. run error was 'run_error'")
+			So(err.Error(), ShouldEqual, "fallback_error")
 		})
 	})
 }
@@ -416,7 +416,7 @@ func TestDo(t *testing.T) {
 			err := Do("", run, fallback)
 
 			Convey("both errors are returned", func() {
-				So(err.Error(), ShouldEqual, "fallback failed with 'fallback failed'. run error was 'i failed'")
+				So(err.Error(), ShouldEqual, "fallback failed")
 			})
 		})
 	})

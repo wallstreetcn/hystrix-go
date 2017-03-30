@@ -1,7 +1,6 @@
 package hystrix
 
 import (
-	"fmt"
 	"log"
 	"sync"
 	"time"
@@ -229,7 +228,8 @@ func (c *command) tryFallback(err error) error {
 	fallbackErr := c.fallback(err)
 	if fallbackErr != nil {
 		c.reportEvent("fallback-failure")
-		return fmt.Errorf("fallback failed with '%v'. run error was '%v'", fallbackErr, err)
+		log.Printf("fallback failed with '%v'. run error was '%v'", fallbackErr, err)
+		return fallbackErr
 	}
 
 	c.reportEvent("fallback-success")

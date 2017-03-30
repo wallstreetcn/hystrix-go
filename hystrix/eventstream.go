@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/afex/hystrix-go/hystrix/rolling"
+	"github.com/wallstreetcn/hystrix-go/hystrix/rolling"
 )
 
 const (
@@ -120,7 +120,7 @@ func (sh *StreamHandler) publishMetrics(cb *CircuitBreaker) error {
 
 		// TODO: all hard-coded values should become configurable settings, per circuit
 
-		RollingStatsWindow:         10000,
+		RollingStatsWindow:         "10000",
 		ExecutionIsolationStrategy: "THREAD",
 
 		CircuitBreakerEnabled:                true,
@@ -283,7 +283,7 @@ type streamCmdMetric struct {
 	ExecutionIsolationThreadPoolKeyOverride          string `json:"propertyValue_executionIsolationThreadPoolKeyOverride"`
 	ExecutionIsolationSemaphoreMaxConcurrentRequests uint32 `json:"propertyValue_executionIsolationSemaphoreMaxConcurrentRequests"`
 	FallbackIsolationSemaphoreMaxConcurrentRequests  uint32 `json:"propertyValue_fallbackIsolationSemaphoreMaxConcurrentRequests"`
-	RollingStatsWindow                               uint32 `json:"propertyValue_metricsRollingStatisticalWindowInMilliseconds"`
+	RollingStatsWindow                               string `json:"propertyValue_metricsRollingStatisticalWindowInMilliseconds"`
 	RequestCacheEnabled                              bool   `json:"propertyValue_requestCacheEnabled"`
 	RequestLogEnabled                                bool   `json:"propertyValue_requestLogEnabled"`
 }
