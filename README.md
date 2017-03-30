@@ -119,6 +119,8 @@ if err != nil {
 metricCollector.Registry.Register(c.NewStatsdCollector)
 ```
 
+### Integate with Turbine
+
 FAQ
 ---
 
