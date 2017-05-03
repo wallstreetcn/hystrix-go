@@ -228,7 +228,6 @@ func (c *command) tryFallback(err error) error {
 	fallbackErr := c.fallback(err)
 	if fallbackErr != nil {
 		c.reportEvent("fallback-failure")
-		log.Printf("fallback failed with '%v'. run error was '%v'", fallbackErr, err)
 		return fallbackErr
 	}
 
