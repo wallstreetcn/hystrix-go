@@ -1,8 +1,8 @@
 hystrix-go
 ==========
 
-[![Build Status](https://travis-ci.org/wallstreetcn/hystrix-go.png?branch=master)](https://travis-ci.org/wallstreetcn/hystrix-go)
-[![GoDoc Documentation](http://godoc.org/github.com/wallstreetcn/hystrix-go/hystrix?status.png)](https://godoc.org/github.com/wallstreetcn/hystrix-go/hystrix)
+[![Build Status](https://travis-ci.org/wallstreetcn/hystrix-go.svg?branch=master)](https://travis-ci.org/wallstreetcn/hystrix-go)
+[![GoDoc Documentation](http://godoc.org/github.com/wallstreetcn/hystrix-go/hystrix?status.svg)](https://godoc.org/github.com/wallstreetcn/hystrix-go/hystrix)
 
 [Hystrix](https://github.com/Netflix/Hystrix) is a great project from Netflix.
 
